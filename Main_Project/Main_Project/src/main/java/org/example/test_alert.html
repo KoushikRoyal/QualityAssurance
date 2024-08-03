@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerts Demo</title>
+</head>
+<body>
+<div id="output">This is the initial text.</div>
+<button id="alertBox" onclick="showAlert()">Show Alert Box</button>
+<button id="confirmBox" onclick="showConfirm()">Show Confirm Box</button>
+<button id="promptBox" onclick="showPrompt()">Show Prompt Box</button>
+
+<script>
+    function showAlert() {
+        alert("This is an alert!");
+    }
+
+    function showConfirm() {
+        var result = confirm("Do you want to proceed?");
+        document.getElementById("output").innerText = result ? "Confirmed!" : "Cancelled.";
+    }
+
+    function showPrompt() {
+        var input = prompt("Please enter something:", "default value");
+        document.getElementById("output").innerText = input ? "You entered: " + input : "Cancelled.";
+    }
+</script>
